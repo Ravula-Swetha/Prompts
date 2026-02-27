@@ -1,6 +1,269 @@
 # Prompts
 
 
+••••••••••••
+Good.
+You need something complex enough to test:
+
+Multi-file generation
+
+Clear separation of concerns
+
+Database layer
+
+Authentication
+
+Background tasks
+
+Error handling
+
+Integration consistency
+
+
+But not so complex that it becomes un-debuggable.
+
+Here’s a serious greenfield project that will properly stress your agent.
+
+
+---
+
+🚀 Project: Multi-Tenant Project Management API
+
+Build a full backend application with:
+
+User authentication (JWT)
+
+Role-based access control (Admin / Member)
+
+Multi-project support
+
+Task management
+
+Comments on tasks
+
+Activity logging
+
+Background email notifications
+
+SQLite (or PostgreSQL)
+
+REST API (FastAPI or Express)
+
+Environment configuration
+
+Proper folder structure
+
+
+
+---
+
+📋 Problem Statement You Can Feed Your Agent
+
+Here’s a clean version to give your planner mode:
+
+
+---
+
+Build a backend API for a multi-tenant project management system.
+
+Requirements:
+
+1. Users can register and login using email and password.
+
+
+2. Use JWT-based authentication.
+
+
+3. Users can create multiple projects.
+
+
+4. Each project has:
+
+Name
+
+Description
+
+Created date
+
+Owner
+
+
+
+5. Each project can have multiple tasks.
+
+
+6. Tasks must include:
+
+Title
+
+Description
+
+Status (Todo, In Progress, Done)
+
+Priority (Low, Medium, High)
+
+Due date
+
+Assigned user
+
+
+
+7. Users can comment on tasks.
+
+
+8. Log activity events (task created, status changed, etc.)
+
+
+9. Only project members can access project data.
+
+
+10. Admin users can delete projects.
+
+
+11. Add background email notification when a task is assigned.
+
+
+12. Use proper folder structure.
+
+
+13. Include basic input validation.
+
+
+14. Include environment configuration (.env support).
+
+
+15. Provide requirements.txt or package.json.
+
+
+
+Use FastAPI + SQLite (or Node + Express if preferred).
+
+Do not use heavy frameworks beyond that.
+
+
+---
+
+🔥 Why This Is a Good Stress Test
+
+It forces your agent to:
+
+Design models
+
+Separate routes
+
+Manage auth layer
+
+Handle relationships
+
+Handle imports correctly
+
+Create multiple files
+
+Avoid circular imports
+
+Handle async (if FastAPI)
+
+Maintain structure
+
+Wire everything correctly
+
+Debug integration issues
+
+
+
+---
+
+🧠 Expected File Structure (Roughly)
+
+Your planner should generate something like:
+
+app/
+  main.py
+  config.py
+  database.py
+  models.py
+  schemas.py
+  auth.py
+  routes/
+      users.py
+      projects.py
+      tasks.py
+      comments.py
+  services/
+      email_service.py
+  utils.py
+.env
+requirements.txt
+
+If your agent can generate this cleanly and make it run:
+
+It’s solid.
+
+
+---
+
+🔎 What This Project Will Reveal About Your Agent
+
+You’ll see if it:
+
+Plans properly
+
+Avoids mixing responsibilities
+
+Handles imports correctly
+
+Manages models & schemas separately
+
+Maintains consistent naming
+
+Handles foreign keys correctly
+
+Avoids circular dependencies
+
+Can debug integration issues
+
+Doesn't randomly redesign during debug
+
+
+
+---
+
+🎯 If You Want Even Harder
+
+After it succeeds:
+
+Add:
+
+Pagination
+
+Search filtering
+
+Soft delete
+
+Rate limiting
+
+Unit tests
+
+Dockerfile
+
+
+That becomes enterprise-level stress.
+
+
+---
+
+If you want, I can also give you:
+
+A second project that tests async + queues + caching
+
+Or one that tests frontend + backend separation
+
+Or one that stresses pure algorithmic complexity
+
+
+Tell me which direction you want to stress-test next.
+
+
 ===========
 Perfect. Greenfield multi-file builder is much cleaner.
 You only need a small, disciplined set of modes.
