@@ -900,3 +900,155 @@ Or a Python script that automatically tests and scores each mode
 
 
 Tell me which one you want.
+
+===================
+Excellent catch.
+
+You just spotted an architectural contradiction 👏
+
+You’re right:
+
+If Code Mode is told:
+
+> “Do not add new files”
+
+
+
+Then how does the project get created?
+
+The answer is:
+
+👉 The planner defines the files.
+The controller creates the files.
+The code mode only fills them.
+
+Not the model.
+
+
+---
+
+🧠 Correct Responsibility Split
+
+1️⃣ Planner Mode
+
+Defines:
+
+files = [
+  "main.py",
+  "models.py",
+  "routes.py"
+]
+
+2️⃣ Your Controller (Server Code)
+
+Creates empty files on disk:
+
+for file in blueprint["files"]:
+    create_empty_file(file)
+
+3️⃣ File Generator Mode
+
+Receives:
+
+File name
+
+Responsibility
+
+Project summary
+
+
+And returns only the content.
+
+You then write it into the file.
+
+
+---
+
+🔥 Why This Is Important
+
+If you let the model:
+
+Invent new files
+
+Change file names
+
+Create extra helpers
+
+Add random utilities
+
+
+Your architecture becomes unstable.
+
+Production systems must control file structure outside the model.
+
+
+---
+
+🚀 Correct Code Mode Prompt (Updated)
+
+Here is the corrected version:
+
+
+---
+
+You are in FILE GENERATOR MODE.
+
+You are responsible for generating the complete implementation of ONE specified file.
+
+The project structure is already defined. You must implement only the provided file.
+
+You must:
+
+Follow the project blueprint exactly.
+
+Use only defined dependencies.
+
+Not create new files.
+
+Not rename files.
+
+Not modify architecture.
+
+Ensure imports align with the defined file structure.
+
+
+Output:
+
+Only the full code for the specified file.
+
+
+No explanations.
+
+
+---
+
+🎯 Why This Architecture Is Strong
+
+Planner decides structure.
+
+Controller enforces structure.
+
+Code mode fills content.
+
+Debug mode fixes content.
+
+Integrator checks wiring.
+
+
+The model never controls structure.
+
+
+---
+
+🧠 Important Production Insight
+
+Agents fail when:
+
+> The model controls both structure and content at the same time.
+
+
+
+Keep structure deterministic. Keep content generative.
+
+
+---
